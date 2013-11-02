@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%= @medical_provider.Specialty %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @medical_provider.string %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @medical_provider.street %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @medical_provider.City %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @medical_provider.Zip %>
+</p>
+
+<%= link_to 'Edit', edit_medical_provider_path(@medical_provider) %> |
+<%= link_to 'Back', medical_providers_path %>

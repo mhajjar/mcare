@@ -1,0 +1,37 @@
+<%= form_for(@medical_provider) do |f| %>
+  <% if @medical_provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medical_provider.errors.count, "error") %> prohibited this medical_provider from being saved:</h2>
+
+      <ul>
+      <% @medical_provider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Specialty %><br>
+    <%= f.text_field :Specialty %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br>
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :Zip %><br>
+    <%= f.text_field :Zip %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
